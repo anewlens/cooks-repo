@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+
+.Hero {
+  position: relative;
+  background-image: url(../../images/hero.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 80vh;
+
+  &-text {
+    position: absolute;
+    left: 5%;
+    top: 35%;
+    max-width: 30%;
+    word-wrap: normal;
+    font-family: "Sanchez";
+    font-size: 6rem;
+    text-transform: capitalize;
+    color: $vanilla;
+    text-shadow: 1px 1px 10px $gray-dark;
+  }
+}

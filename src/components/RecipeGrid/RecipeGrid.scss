@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+.RecipeGrid {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-family: "Sanchez";
+    font-size: 1.8rem;
+  }
+
+  &-search {
+    background-color: $eggshell;
+    border: 1px solid $gray-medium;
+    border-radius: 5px;
+  }
+
+  &-boxList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+}

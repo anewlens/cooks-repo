@@ -1,0 +1,47 @@
+@import "./styles/variables.scss";
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $eggshell;
+
+  &-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 4rem;
+
+    &-title {
+      transition: all 0.1s ease-out;
+      font-size: 3.2rem;
+      color: $red-dark;
+
+      &:hover {
+        color: $red-medium;
+      }
+    }
+
+    &-link {
+      font-size: 2.4rem;
+      color: $gray-dark;
+
+      &:hover {
+        color: $gray-medium;
+      }
+    }
+
+    & a {
+      transition: all 0.1s ease-out;
+      padding: 1rem;
+      font-family: "Sanchez", sans-serif;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+
+    &-span {
+      display: flex;
+    }
+  }
+}
