@@ -18,7 +18,7 @@ function App() {
             </Link>
 
             <Link to="/users" className="App-nav-link">
-              Users
+              Login
             </Link>
           </span>
         </nav>

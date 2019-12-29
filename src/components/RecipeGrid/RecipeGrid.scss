@@ -10,15 +10,18 @@
   }
 
   &-search {
-    background-color: $eggshell;
+    background-color: white;
     border: 1px solid $gray-medium;
     border-radius: 5px;
+    font-size: 1.6rem;
+    padding: 8px 1rem;
+    color: $gray-dark;
   }
 
   &-boxList {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 2rem;
+    gap: 3rem;
   }
 }
