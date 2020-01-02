@@ -1,4 +1,6 @@
-export default [
+import RecipesActionTypes from "./recipes.types"
+
+const INITIAL_STATE = [
   {
     id: 1,
     name: "Garlicky Mashed Potatoes",
@@ -82,3 +84,15 @@ export default [
     ]
   }
 ]
+
+const recipesReducer = (state = INITIAL_STATE, { type, payload }) => {
+  switch (type) {
+    case RecipesActionTypes.SET_RECIPES:
+      return payload
+
+    default:
+      return state
+  }
+}
+
+export default recipesReducer
