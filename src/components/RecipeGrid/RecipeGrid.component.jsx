@@ -1,9 +1,10 @@
 import React from "react"
 import { connect } from "react-redux"
+import { togglePreview } from "../../redux/preview/preview.actions"
 import RecipeBox from "../RecipeBox/RecipeBox.component"
 import "./RecipeGrid.scss"
 
-const RecipeGrid = ({ recipes }) => {
+const RecipeGrid = ({ recipes, setPreview }) => {
   return (
     <section className="RecipeGrid">
       <header className="RecipeGrid-header">
@@ -11,14 +12,8 @@ const RecipeGrid = ({ recipes }) => {
         <input type="text" value="" className="RecipeGrid-search" />
       </header>
       <ul className="RecipeGrid-boxList">
-        {recipes.map(({ name, category, dateAdded, rating, tags }) => (
-          <RecipeBox
-            title={name}
-            category={category}
-            dateCreated={dateAdded}
-            rating={rating}
-            tags={tags}
-          />
+        {recipes.map(recipe => (
+          <RecipeBox recipe={recipe} handler={setPreview} />
         ))}
       </ul>
     </section>
@@ -26,7 +21,12 @@ const RecipeGrid = ({ recipes }) => {
 }
 
 const mapStateToProps = state => ({
-  recipes: state.recipes
+  recipes: state.recipes,
+  preview: state.preview
 })
 
-export default connect(mapStateToProps, null)(RecipeGrid)
+const mapDispatchToProps = dispatch => ({
+  setPreview: item => dispatch(togglePreview(item))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeGrid)

@@ -13,6 +13,10 @@
     color: $eggshell;
   }
 
+  &-btn {
+    border: none;
+  }
+
   &-title {
     margin-bottom: 5px;
     border-bottom: 0.5px solid rgba($eggshell, 0.5);

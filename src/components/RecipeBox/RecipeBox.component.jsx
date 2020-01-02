@@ -1,23 +1,27 @@
 import React from "react"
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 import "./RecipeBox.scss"
 import Ratings from "../Ratings/Ratings.component"
 
-const RecipeBox = ({ title, category, rating, tags, dateCreated }) => {
+const RecipeBox = ({
+  recipe,
+  recipe: { name, category, rating, tags, dateCreated },
+  handler
+}) => {
   return (
-    <a className="RecipeBox-link" >
+    <button className="RecipeBox-btn" onClick={() => handler(recipe)}>
       <li className="RecipeBox">
-        <h3 className="RecipeBox-title">{title}</h3>
+        <h3 className="RecipeBox-title">{name}</h3>
         <span className="RecipeBox-subheading">
           <p className="RecipeBox-category">{category}</p>
-          <Ratings rating={rating} className='RecipeBox-rating-star' />
+          <Ratings rating={rating} className="RecipeBox-rating-star" />
         </span>
         <span className="RecipeBox-footer">
           <p className="RecipeBox-tags">{tags.join(", ")}</p>
           <p className="RecipeBox-date">Added {dateCreated}</p>
         </span>
       </li>
-    </a>
+    </button>
   )
 }
 
