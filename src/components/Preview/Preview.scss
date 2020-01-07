@@ -1,0 +1,107 @@
+@import "../../styles/variables.scss";
+
+.Preview {
+  transition: all 0.2s ease-out;
+  animation: slideIn 0.4s ease-in-out forwards;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40vw;
+  min-height: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  padding: 5rem 10rem;
+  background: $eggshell;
+
+  &-exitBtn {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    border: none;
+    background: none;
+    font-size: 3rem;
+    font-family: "Montserrat";
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &-title {
+    font-size: 3rem;
+    font-family: "Sanchez";
+    font-weight: bold;
+  }
+
+  &-rating-star {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  &-subheading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Sanchez";
+  }
+
+  &-category {
+    font-size: 2rem;
+  }
+
+  &-date {
+    font-size: 1.6rem;
+  }
+
+  &-ingredients {
+    margin-top: 2rem;
+
+    &-heading {
+      font-size: 2.4rem;
+      color: $red-dark;
+      font-family: "Sanchez";
+    }
+    &-item {
+      font-size: 1.8rem;
+      font-family: "Montserrat";
+      list-style: disc inside;
+    }
+  }
+
+  &-steps {
+    margin: 2rem 0;
+    border-top: 1px solid $gray-dark;
+    padding-top: 1rem;
+
+    &-heading {
+      font-size: 2.4rem;
+      color: $red-dark;
+      font-family: "Sanchez";
+    }
+
+    & li:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &-item {
+      list-style: decimal inside;
+      font-size: 1.8rem;
+      font-family: "Montserrat";
+    }
+  }
+
+  &-footer {
+    font-size: 1.6rem;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(40vw);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}

@@ -6,7 +6,7 @@ export default (state = false, { type, payload }) => {
       if (payload) {
         return payload
       } else {
-        return state
+        return false
       }
 
     default:

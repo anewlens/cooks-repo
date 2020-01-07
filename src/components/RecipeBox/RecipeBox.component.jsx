@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import "./RecipeBox.scss"
 import Ratings from "../Ratings/Ratings.component"
 
