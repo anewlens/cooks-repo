@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <nav className="App-nav">
           <Link to="/" className="App-nav-title">
-            Cook's Repo
+            Chef's Repo
           </Link>
           <span className="App-nav-span">
             <Link to="/about" className="App-nav-link">
